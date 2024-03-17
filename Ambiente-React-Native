@@ -10,4 +10,8 @@ sudo apt install nodejs
 sudo apt install npm
 
 # JDK
-sudo apt-get install openjdk-y-jdk
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update
+sudo apt-get install openjdk-18-jdk
+
+sudo update-alternatives --config java
