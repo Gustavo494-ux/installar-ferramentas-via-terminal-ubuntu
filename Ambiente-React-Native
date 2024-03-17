@@ -15,3 +15,8 @@ sudo apt-get update
 sudo apt-get install openjdk-18-jdk
 
 sudo update-alternatives --config java
+
+#Instapa o b
+
+#Instala o EXPO-cli
+sudo npm install -g expo-cli
