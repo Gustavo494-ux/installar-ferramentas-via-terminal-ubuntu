@@ -1,0 +1,13 @@
+sudo apt update
+
+# Instalação do cUrl
+sudo apt-get install curl
+
+# Node
+sudo apt install nodejs
+
+# npm
+sudo apt install npm
+
+# JDK
+sudo apt-get install openjdk-y-jdk
