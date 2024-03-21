@@ -16,7 +16,8 @@ sudo apt-get install openjdk-18-jdk
 
 sudo update-alternatives --config java
 
-#Instapa o b
+#Instapa o adb
+sudo apt install adb
 
 #Instala o EXPO-cli
 sudo npm install -g expo-cli
