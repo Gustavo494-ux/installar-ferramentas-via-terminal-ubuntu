@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Baixar o arquivo Postman
+wget https://dl.pstmn.io/download/latest/linux64 -O postman-linux-x64.tar.gz
+
+# Extrair o arquivo
+tar -xzf postman-linux-x64.tar.gz
+
+# Mover o diretório extraído para /opt
+sudo mv Postman /opt
+
+# Criar um link simbólico para o Postman
+sudo ln -s /opt/Postman/Postman /usr/bin/postman
+
+# Remover o arquivo baixado
+rm postman-linux-x64.tar.gz
+
+# Criar o arquivo de inicialização (shortcut)
+echo "[Desktop Entry]
+Name=Postman
+Exec=/usr/bin/postman
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;" > ~/.local/share/applications/postman.desktop
+
+echo "Postman foi instalado e um atalho foi criado com sucesso!"
