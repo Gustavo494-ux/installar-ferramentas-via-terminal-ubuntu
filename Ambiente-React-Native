@@ -12,7 +12,7 @@ sudo apt install npm
 # JDK
 sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
-sudo apt-get install openjdk-18-jdk
+sudo apt-get install openjdk-21-jdk
 
 sudo update-alternatives --config java
 
