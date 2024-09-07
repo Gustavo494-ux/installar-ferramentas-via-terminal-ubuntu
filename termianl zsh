@@ -1,0 +1,4 @@
+sudo apt-get install zsh
+sudo apt-get install curl
+sudo add-apt-repository ppa:git-core/ppa ; sudo apt update ; sudo apt-get install git
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
