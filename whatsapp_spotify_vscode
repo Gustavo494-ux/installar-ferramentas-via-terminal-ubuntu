@@ -1,0 +1,17 @@
+sudo apt update
+sudo apt install -y software-properties-common apt-transport-https wget curl snapd
+
+# Instalar WhatsApp Desktop via Snap
+sudo snap install whatsapp-for-linux
+
+# Instalar Spotify via APT
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo tee /etc/apt/trusted.gpg.d/spotify.asc
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt update
+sudo apt install -y spotify-client
+
+# Instalar Visual Studio Code via APT
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt install -y code
