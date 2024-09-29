@@ -13,5 +13,44 @@ echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.zshrc
 # Atualizar as configurações do zsh
 source ~/.zshrc
 
-# Verificar a instalação
-go version
+
+
+
+# Adicionar o Go ao PATH
+echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.zshrc
+
+# Configurar o GOPATH para a pasta Documentos/Projetos
+echo "export GOPATH=\$HOME/Documentos/Projetos/go" >> ~/.zshrc
+
+# Incluir o GOPATH/bin no PATH para rodar binários instalados
+echo "export PATH=\$PATH:\$GOPATH/bin" >> ~/.zshrc
+
+# Atualizar as configurações do terminal
+source ~/.zshrc
+
+
+# criando workspace
+mkdir -p ~/Documentos/Projetos/go/{bin,src,pkg}
+
+
+
+# projeto de teste
+mkdir -p ~/Documentos/Projetos/go/src/hello
+cd ~/Documentos/Projetos/go/src/hello
+go mod init hello
+
+# Criar o arquivo `main.go`
+cat <<EOL > main.go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Olá, Go na pasta Documentos/Projetos!")
+}
+EOL
+
+# Executar o projeto
+go run main.go
+
+
