@@ -1,0 +1,28 @@
+#Instalar o git
+sudo apt update
+sudo apt install git
+
+#configurar credenciais
+git config --global user.name "Gustavo Gama"
+git config --global user.email "gustavogama494@gmail.com"
+
+
+#Gerar chave SSH
+ssh-keygen -t rsa -b 4096 -C "gustavogama494@gmail.com"
+
+
+#Adicionar a chave SSH ao agente ssh
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+
+
+
+
+
+
+#Adicionar a chave ssh abaixo na conta git
+cat ~/.ssh/id_rsa.pub
+
+# Testar a conexão SSH
+ssh -T git@github.com
